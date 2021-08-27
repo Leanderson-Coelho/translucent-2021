@@ -1,3 +1,6 @@
+# TODO
+ - create a template for routes (don't know how specifically)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
