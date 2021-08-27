@@ -22,5 +22,6 @@ module.exports = {
     'no-use-before-define': ['off'],
     'no-console': ['error', { allow: ['log', 'warn', 'error'] }],
     'react/destructuring-assignment': 0,
+    'import/order': 0,
   },
 };
