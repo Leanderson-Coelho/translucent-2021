@@ -23,5 +23,6 @@ module.exports = {
     'no-console': ['error', { allow: ['log', 'warn', 'error'] }],
     'react/destructuring-assignment': 0,
     'import/order': 0,
+    'react/require-default-props': 0,
   },
 };
