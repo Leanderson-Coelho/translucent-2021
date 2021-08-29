@@ -2,7 +2,7 @@
 
 ### CHANGELOG AND PROGRESS
 
-#### 27/08/2021
+#### 28/08/2021
 
 `Last Commit:` [c8e6774](https://github.com/Leanderson-Coelho/translucent-2021/tree/c8e67742cc4a96b35b8c7be565518e90aa1572e1)
 
