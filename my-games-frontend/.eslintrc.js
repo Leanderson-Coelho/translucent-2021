@@ -14,15 +14,26 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
-    'react/jsx-filename-extension': [0, { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': [
+      0,
+      {
+        extensions: ['.js', '.jsx'],
+      },
+    ],
     'jsx-quotes': ['error', 'prefer-single'],
     'react/jsx-one-expression-per-line': 'off',
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
     'no-use-before-define': ['off'],
-    'no-console': ['error', { allow: ['log', 'warn', 'error'] }],
+    'no-console': [
+      'error',
+      {
+        allow: ['log', 'warn', 'error'],
+      },
+    ],
     'react/destructuring-assignment': 0,
     'import/order': 0,
     'react/require-default-props': 0,
+    'object-curly-newline': 'off',
   },
 };
