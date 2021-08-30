@@ -4,13 +4,12 @@ import useStyles from './style';
 
 const SearchInput = () => {
   const style = useStyles();
-  // <div className='inputBox'>
+  // TODO i18n at 'search'
   return (
     <Card classes={{ root: style.root }}>
-      <InputBase placeholder='Search...' />
+      <InputBase classes={{ root: style.inputBase }} placeholder='Search...' />
     </Card>
   );
-  // </div>
 };
 
 export default SearchInput;
