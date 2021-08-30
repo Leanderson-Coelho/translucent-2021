@@ -2,6 +2,16 @@
 
 ### CHANGELOG AND PROGRESS
 
+#### 29/08/2021
+
+`Last Commit:` [545ce89](https://github.com/Leanderson-Coelho/translucent-2021/tree/545ce8961da5b27275ab9387584bc2dc31d3fe2f)
+
+- **FrontEnd Development**: Building GameCard component style.
+
+- **FrontEnd Development**: Adding GameCard props for render data in template.
+
+- **FrontEnd Development**: Updating Catalog page for render GameCard list grid.
+
 #### 28/08/2021
 
 `Last Commit:` [c8e6774](https://github.com/Leanderson-Coelho/translucent-2021/tree/c8e67742cc4a96b35b8c7be565518e90aa1572e1)
