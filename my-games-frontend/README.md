@@ -1,5 +1,7 @@
 # TODO
- - create a template for routes (don't know how specifically)
+
+- format completion date (add i18n)
+- improve the years old calcule
 
 # Getting Started with Create React App
 
