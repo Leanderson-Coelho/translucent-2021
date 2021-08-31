@@ -1,5 +1,12 @@
 # TODO
 
+#### General
+
+- i18n
+- update all .css to .ts
+
+#### Catalog
+
 - format completion date (add i18n)
 - improve the years old calcule
 
