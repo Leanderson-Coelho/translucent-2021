@@ -2,6 +2,16 @@
 
 ### CHANGELOG AND PROGRESS
 
+#### 30/08/2021
+
+`Last Commit:` [4be935e](https://github.com/Leanderson-Coelho/translucent-2021/tree/4be935edf136a228a8870f233e17effe8ba6d526)
+
+- **FrontEnd Development**: Starting Form page with Matirial UI Text Fields.
+
+- **FrontEnd Development**: Problems with theming in the Text Fields.
+
+- **FrontEnd Development**: Overriding Material UI theme config for Text Fields.
+
 #### 29/08/2021
 
 `Last Commit:` [545ce89](https://github.com/Leanderson-Coelho/translucent-2021/tree/545ce8961da5b27275ab9387584bc2dc31d3fe2f)
@@ -26,11 +36,11 @@
 
 `Last Commit:` [5bea0bb](https://github.com/Leanderson-Coelho/translucent-2021/tree/5bea0bb417d018e7ae09268a83e6856cc7b567de)
 
-- **FrontEnd Development**: Project creation and configurations: git and files organizations
+- **FrontEnd Development**: Project creation and configurations: git and files organizations.
 
-- **FrontEnd Development**: FrontEnd Architecture Organization: frontend packages organization, code quality and formatting configurations (prettier + eslint) and first essentials libraries
+- **FrontEnd Development**: FrontEnd Architecture Organization: frontend packages organization, code quality and formatting configurations (prettier + eslint) and first essentials libraries.
 
-- **FrontEnd Development**: Starting Catalog feature configuring routes and creating components
+- **FrontEnd Development**: Starting Catalog feature configuring routes and creating components.
 
 #### 26/08/2021
 
