@@ -1,7 +1,6 @@
 /* eslint-disable function-paren-newline */
 /* eslint-disable implicit-arrow-linebreak */
-import { makeStyles, Select, TextField } from '@material-ui/core';
-import { createStyles, withStyles } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/core';
 
 const useStyle = makeStyles((theme) => ({
   formContent: {
@@ -16,6 +15,26 @@ const useStyle = makeStyles((theme) => ({
 
   inputsContainer: {
     padding: '1rem',
+    // alignItems: 'center',
+  },
+
+  buttonsContainer: {
+    paddingRight: '1rem',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+  },
+
+  formButtonCancel: {
+    marginRight: '0.5rem',
+  },
+
+  selectAline: {
+    alignSelf: 'flex-end',
+  },
+
+  checkboxAlign: {
+    alignSelf: 'center',
   },
 
   checkbox: {
@@ -29,7 +48,7 @@ const useStyle = makeStyles((theme) => ({
 
   checked: {},
 
-  select: {
+  selectAndDate: {
     '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input': {
       color:
         theme.palette.type === 'dark'
@@ -49,41 +68,23 @@ const useStyle = makeStyles((theme) => ({
           : theme.palette.primary.main,
     },
   },
+
+  outlinedFieldTheme: {
+    '& label.Mui-focused': {
+      color:
+        theme.palette.type === 'dark'
+          ? theme.palette.secondary.main
+          : theme.palette.primary.main,
+    },
+    '& .MuiOutlinedInput-root': {
+      '&.Mui-focused fieldset': {
+        borderColor:
+          theme.palette.type === 'dark'
+            ? theme.palette.secondary.main
+            : theme.palette.primary.main,
+      },
+    },
+  },
 }));
 
-const OutlinedFieldTheme = withStyles((theme) =>
-  createStyles({
-    root: {
-      '& label.Mui-focused': {
-        color:
-          theme.palette.type === 'dark'
-            ? theme.palette.secondary.main
-            : theme.palette.primary.main,
-      },
-      '& .MuiOutlinedInput-root': {
-        '&.Mui-focused fieldset': {
-          borderColor:
-            theme.palette.type === 'dark'
-              ? theme.palette.secondary.main
-              : theme.palette.primary.main,
-        },
-      },
-    },
-  }),
-)(TextField);
-
-const SelectTheme = withStyles((theme) =>
-  createStyles({
-    root: {
-      '&:focus ': {
-        color:
-          theme.palette.type === 'dark'
-            ? theme.palette.secondary.main
-            : theme.palette.primary.main,
-      },
-    },
-  }),
-)(Select);
-
-export { OutlinedFieldTheme, SelectTheme };
 export default useStyle;
