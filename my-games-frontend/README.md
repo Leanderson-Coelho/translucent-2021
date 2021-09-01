@@ -4,11 +4,14 @@
 
 - i18n
 - update all .css to .ts
+- remove clsx
+- add routes config
 
 #### Catalog
 
 - format completion date (add i18n)
 - improve the years old calcule
+- update flex to grid cards list
 
 # Getting Started with Create React App
 
