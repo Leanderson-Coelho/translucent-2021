@@ -28,9 +28,9 @@ const GameCard = (props: Props) => {
         <div className='cardContentNotes'>{props.notes}</div>
         <Typography color='textSecondary'>
           {props.completionDate ? (
-            <div>Completed at {props.completionDate.toDateString()}</div>
+            <>Completed at {props.completionDate.toDateString()}</>
           ) : (
-            <div>Uncompleted</div>
+            <>Uncompleted</>
           )}
         </Typography>
       </div>
