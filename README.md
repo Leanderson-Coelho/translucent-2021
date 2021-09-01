@@ -2,6 +2,16 @@
 
 ### CHANGELOG AND PROGRESS
 
+#### 31/08/2021
+
+`Last Commit:` [af0e455](https://github.com/Leanderson-Coelho/translucent-2021/tree/af0e45594b871a559d1bc3cadd93859e9875edab)
+
+- **FrontEnd Development**: Adding form validation and error feedback.
+
+- **FrontEnd Development**: Trying validate manually one field with formik, don't work. Solutions searching, success using 'when' of yup.
+
+- **FrontEnd Development**: Updating Catalog, adding floating button.
+
 #### 30/08/2021
 
 `Last Commit:` [4be935e](https://github.com/Leanderson-Coelho/translucent-2021/tree/4be935edf136a228a8870f233e17effe8ba6d526)
