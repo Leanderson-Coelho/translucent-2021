@@ -6,11 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import Palette from './config/theme/Palette';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Palette>
-      <App />
-    </Palette>
-  </React.StrictMode>,
+  <Palette>
+    <App />
+  </Palette>,
   document.getElementById('root'),
 );
 
