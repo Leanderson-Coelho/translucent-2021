@@ -35,5 +35,6 @@ module.exports = {
     'import/order': 0,
     'react/require-default-props': 0,
     'object-curly-newline': 'off',
+    'operator-linebreak': ['off'],
   },
 };
