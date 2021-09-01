@@ -13,6 +13,10 @@
 - improve the years old calcule
 - update flex to grid cards list
 
+#### Form
+
+- remove 'fullWidth' prop from TextFields
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
