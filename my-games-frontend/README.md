@@ -1,21 +1,15 @@
 # TODO
 
-#### General
-
-- i18n
-- update all .css to .ts
-- remove clsx
-- add routes config
-
-#### Catalog
-
-- format completion date (add i18n)
-- improve the years old calcule
-- update flex to grid cards list
-
-#### Form
+#### TODO Priorities
 
 - remove 'fullWidth' prop from TextFields
+- update all .css to .ts
+- update flex to grid cards list
+- i18n
+- format completion date (add i18n)
+- add routes config
+- improve the years old calcule
+- remove clsx
 
 # Getting Started with Create React App
 
