@@ -2,7 +2,17 @@
 
 ### CHANGELOG AND PROGRESS
 
-#### 31/08/2021
+#### 09/01/2021
+
+`Last Commit:` [cc8eae0](https://github.com/Leanderson-Coelho/translucent-2021/tree/cc8eae0c6f9953d51ae89c3a811af4de8f94f7d3)
+
+- **BackEnd Development**: Project creation. Mongo Database configuration and starting a new Container Docker.
+
+- **BackEnd Development**: Problems with validations without JPA. Adding Hibernate dependency.
+
+- **BackEnd Development**: Validators working, but them need a handler.
+
+#### 08/31/2021
 
 `Last Commit:` [af0e455](https://github.com/Leanderson-Coelho/translucent-2021/tree/af0e45594b871a559d1bc3cadd93859e9875edab)
 
@@ -12,7 +22,7 @@
 
 - **FrontEnd Development**: Updating Catalog, adding floating button.
 
-#### 30/08/2021
+#### 08/30/2021
 
 `Last Commit:` [4be935e](https://github.com/Leanderson-Coelho/translucent-2021/tree/4be935edf136a228a8870f233e17effe8ba6d526)
 
@@ -22,7 +32,7 @@
 
 - **FrontEnd Development**: Overriding Material UI theme config for Text Fields.
 
-#### 29/08/2021
+#### 08/29/2021
 
 `Last Commit:` [545ce89](https://github.com/Leanderson-Coelho/translucent-2021/tree/545ce8961da5b27275ab9387584bc2dc31d3fe2f)
 
@@ -32,7 +42,7 @@
 
 - **FrontEnd Development**: Updating Catalog page for render GameCard list grid.
 
-#### 28/08/2021
+#### 08/28/2021
 
 `Last Commit:` [c8e6774](https://github.com/Leanderson-Coelho/translucent-2021/tree/c8e67742cc4a96b35b8c7be565518e90aa1572e1)
 
@@ -42,7 +52,7 @@
 
 - **FrontEnd Development**: Search Input component style made.
 
-#### 27/08/2021
+#### 08/27/2021
 
 `Last Commit:` [5bea0bb](https://github.com/Leanderson-Coelho/translucent-2021/tree/5bea0bb417d018e7ae09268a83e6856cc7b567de)
 
@@ -52,7 +62,7 @@
 
 - **FrontEnd Development**: Starting Catalog feature configuring routes and creating components.
 
-#### 26/08/2021
+#### 08/26/2021
 
 - **Documentation**: Registering all requirements in a [Requirements Specification Document](https://docs.google.com/document/d/1TRdA4pVpm0aHK1ijPvaXK--YxASX1PJ1Eu3JnZIyg9w/edit?usp=sharing)
 
