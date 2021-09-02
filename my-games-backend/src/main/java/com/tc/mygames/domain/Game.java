@@ -6,7 +6,6 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.UUID;
@@ -20,11 +19,8 @@ public class Game implements Serializable {
     @Id
     private UUID id;
 
-    @NotEmpty
-    @NotNull
     private String title;
 
-    @Past(message = "error.invalid.date.past.tc")
     private LocalDate completionDate;
 
     private String console;
