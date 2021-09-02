@@ -4,11 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Palette from './config/theme/Palette';
+import { Provider } from 'react-redux';
+import store from './redux';
 
 ReactDOM.render(
-  <Palette>
-    <App />
-  </Palette>,
+  <Provider store={store}>
+    <Palette>
+      <App />
+    </Palette>
+  </Provider>,
   document.getElementById('root'),
 );
 
