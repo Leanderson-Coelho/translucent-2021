@@ -4,16 +4,18 @@ import useCardStyle from './cardStyle';
 import './style.css';
 
 interface Props {
-  title: String;
-  notes: String;
-  completionDate: Date | null;
-  console: String;
-  year: Date;
+  title?: String;
+  notes?: String;
+  completionDate?: Date;
+  console?: String;
+  year?: Date;
 }
 
 const GameCard = (props: Props) => {
   const style = useCardStyle();
-  const gameOld = new Date().getFullYear() - props.year.getFullYear();
+  const gameOld = props.year
+    ? new Date().getFullYear() - props.year?.getFullYear()
+    : '0';
 
   return (
     <Card classes={{ root: style.root }}>
