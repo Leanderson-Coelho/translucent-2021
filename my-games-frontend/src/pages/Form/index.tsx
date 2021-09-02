@@ -74,7 +74,6 @@ const Form = () => {
                   name='title'
                   className={style.outlinedFieldTheme}
                   autoFocus
-                  fullWidth
                   variant='outlined'
                   value={formik.values.title}
                   onChange={formik.handleChange}
@@ -119,7 +118,6 @@ const Form = () => {
                 <TextField
                   name='console'
                   className={style.selectAndDate}
-                  fullWidth
                   select
                   variant='outlined'
                   value={formik.values.console}
@@ -141,7 +139,6 @@ const Form = () => {
                 <TextField
                   name='year'
                   className={style.selectAndDate}
-                  fullWidth
                   type='date'
                   variant='outlined'
                   value={formik.values.year}
@@ -157,7 +154,6 @@ const Form = () => {
                 <TextField
                   name='notes'
                   className={style.outlinedFieldTheme}
-                  fullWidth
                   variant='outlined'
                   value={formik.values.notes}
                   onChange={formik.handleChange}

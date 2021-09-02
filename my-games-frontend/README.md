@@ -2,8 +2,10 @@
 
 #### TODO Priorities
 
-- remove 'fullWidth' prop from TextFields
-- update all .css to .ts
+x remove 'fullWidth' prop from TextFields
+
+x update all .css to .ts
+
 - update flex to grid cards list
 - i18n
 - format completion date (add i18n)

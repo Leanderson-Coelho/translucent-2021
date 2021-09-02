@@ -1,20 +1,25 @@
 import React from 'react';
 import { AppBar, Toolbar } from '@material-ui/core';
-import './style.css';
+import useStyle from './style';
+import clsx from 'clsx';
 
-const Header = () => (
-  <AppBar position='fixed' className='header'>
-    <Toolbar classes={{ root: 'headerContainer' }}>
-      <h2 className='headerTitle'>My games</h2>
-      <div className='headerOptionContainer'>
-        <div className='tcSticks'>
-          <div className='sideStick topStick' />
-          <div className='middleStick' />
-          <div className='sideStick bottomStick' />
+const Header = () => {
+  const style = useStyle();
+
+  return (
+    <AppBar position='fixed'>
+      <Toolbar classes={{ root: style.headerContainer }}>
+        <h2 className={style.headerTitle}>My games</h2>
+        <div className={style.headerOptionContainer}>
+          <div className={style.tcSticks}>
+            <div className={clsx(style.sideStick, style.topStick)} />
+            <div className={style.middleStick} />
+            <div className={clsx(style.sideStick, style.bottomStick)} />
+          </div>
         </div>
-      </div>
-    </Toolbar>
-  </AppBar>
-);
+      </Toolbar>
+    </AppBar>
+  );
+};
 
 export default Header;

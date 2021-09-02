@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core';
-// override material ui theme
+
 const useCardStyle = makeStyles((theme) => ({
   root: {
     borderRadius: '0 0 0.3rem 0.3rem',
@@ -15,6 +15,33 @@ const useCardStyle = makeStyles((theme) => ({
     fontWeight: 'bold',
     fontSize: '1rem',
     textAlign: 'justify',
+    flex: 2,
+  },
+
+  cardContent: {
+    flex: 3,
+  },
+
+  cardContentNotes: {
+    textAlign: 'justify',
+    marginBottom: '0.3rem',
+  },
+
+  cardFooter: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+
+  itemSpacing: {
+    padding: '0.5rem',
+  },
+
+  itemSpacingFooter: {
+    paddingRight: '0.5rem',
+    paddingLeft: '0.5rem',
   },
 }));
 

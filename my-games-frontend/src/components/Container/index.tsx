@@ -1,12 +1,13 @@
 import React, { ReactElement } from 'react';
-import './style.css';
+import useStyle from './style';
 
 interface Props {
   children: ReactElement;
 }
 
-const Container = (props: Props) => (
-  <div className='containerMargin'>{props.children}</div>
-);
+const Container = (props: Props) => {
+  const style = useStyle();
+  return <div className={style.containerMargin}>{props.children}</div>;
+};
 
 export default Container;

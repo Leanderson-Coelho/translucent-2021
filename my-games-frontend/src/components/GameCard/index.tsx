@@ -1,7 +1,7 @@
 import React from 'react';
 import { Chip, Card, Paper, Typography } from '@material-ui/core';
 import useCardStyle from './cardStyle';
-import './style.css';
+import clsx from 'clsx';
 
 interface Props {
   title?: String;
@@ -17,18 +17,26 @@ const GameCard = (props: Props) => {
   const gameOld = props.year
     ? new Date().getFullYear() - props.year?.getFullYear()
     : '0';
+  console.log(
+    'props.completed && props.completionDate',
+    'props.completed ',
+    props.completed,
+    'props.completionDate',
+    props.completionDate,
+    props.completed && props.completionDate,
+  );
 
   return (
     <Card classes={{ root: style.root }}>
       <Paper
         classes={{ root: style.cardHeader }}
         elevation={2}
-        className='cardHeader itemSpacing'
+        className={style.itemSpacing}
       >
         {props.title}
       </Paper>
-      <div className='cardContent itemSpacing'>
-        <div className='cardContentNotes'>{props.notes}</div>
+      <div className={clsx(style.cardContent, style.itemSpacing)}>
+        <div className={style.cardContentNotes}>{props.notes}</div>
         <Typography color='textSecondary'>
           {props.completed && props.completionDate ? (
             <>Completed at {props.completionDate.toDateString()}</>
@@ -37,7 +45,7 @@ const GameCard = (props: Props) => {
           )}
         </Typography>
       </div>
-      <div className='cardFooter itemSpacingFooter'>
+      <div className={clsx(style.cardFooter, style.itemSpacingFooter)}>
         <Chip color='secondary' size='small' label={props.console} />
         <div>{gameOld} years old</div>
       </div>
