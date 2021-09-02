@@ -9,6 +9,7 @@ interface Props {
   completionDate?: Date;
   console?: String;
   year?: Date;
+  completed?: Boolean;
 }
 
 const GameCard = (props: Props) => {
@@ -29,7 +30,7 @@ const GameCard = (props: Props) => {
       <div className='cardContent itemSpacing'>
         <div className='cardContentNotes'>{props.notes}</div>
         <Typography color='textSecondary'>
-          {props.completionDate ? (
+          {props.completed && props.completionDate ? (
             <>Completed at {props.completionDate.toDateString()}</>
           ) : (
             <>Uncompleted</>
