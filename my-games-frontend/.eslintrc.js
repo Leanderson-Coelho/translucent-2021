@@ -36,5 +36,7 @@ module.exports = {
     'react/require-default-props': 0,
     'object-curly-newline': 'off',
     'operator-linebreak': ['off'],
+    'import/prefer-default-export': 'off',
+    'no-useless-constructor:': 0,
   },
 };
