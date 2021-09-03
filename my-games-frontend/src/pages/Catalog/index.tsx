@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import HeaderContentTemplate from '../../components/HeaderContentTemplate';
 import SearchInput from '../../components/SearchInput';
 import GameCard from '../../components/GameCard';
@@ -7,14 +7,18 @@ import AddIcon from '@material-ui/icons/Add';
 import useStyles from './style';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { State } from '../../redux/reducer';
 import { PATHS } from '../../Routes';
+import { RootState } from '../../redux';
 
 const Catalog = () => {
   const style = useStyles();
   const router = useHistory();
-  const games = useSelector((state: State) => state.games);
-  console.log('Redux State', games);
+  const games = useSelector((state: RootState) => state.game.data);
+  const stateRedux = useSelector((state) => state);
+
+  useEffect(() => {
+    console.log('state', stateRedux);
+  }, [stateRedux]);
 
   return (
     <HeaderContentTemplate>
