@@ -2,6 +2,24 @@
 
 ### CHANGELOG AND PROGRESS
 
+#### 09/02/2021
+
+`Last Commit: FrontEnd` [6cf5456](https://github.com/Leanderson-Coelho/translucent-2021/tree/6cf5456d7ce632656b2b091a3c7df5f662fdc500)
+
+- **FrontEnd Development**: Adding App state with redux.
+
+- **FrontEnd Development**: Refactoring files styles.
+
+- **FrontEnd Development**: Refactoring catalog list from flexbox to Grid.
+
+`Last Commit: BackEnd` [db79726](https://github.com/Leanderson-Coelho/translucent-2021/tree/db79726269225e103ac46f3e6db6140599fa58dd)
+
+- **BackEnd Development**: Adding handler validators for Hibarnate exception.
+
+- **BackEnd Development**: Project configurations: base path.
+
+- **BackEnd Development**: Adding manual validations for Game.
+
 #### 09/01/2021
 
 `Last Commit:` [cc8eae0](https://github.com/Leanderson-Coelho/translucent-2021/tree/cc8eae0c6f9953d51ae89c3a811af4de8f94f7d3)
