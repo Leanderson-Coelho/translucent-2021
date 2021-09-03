@@ -15,25 +15,34 @@ import {
 import { useHistory } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import i18n, { toLocaleString } from '../../config/i18n';
+import { DateTime } from 'luxon';
 
 const Form = () => {
   const style = useStyle();
   const router = useHistory();
+  const minDateLocale = toLocaleString(DateTime.fromISO('1970-01-01'));
   const validationSchema = yup.object({
     title: yup
       .string()
-      .max(150, 'Maximun 150 characters')
-      .required('Requereddd'),
+      .max(150, i18n.t('form.input.validation.maxCharacters'))
+      .required(i18n.t('form.input.validation.required')),
     completed: yup.boolean(),
     completionDate: yup.date().when('completed', {
       is: true,
-      then: yup.date().max(new Date(), 'The maximun date is Today').required(),
+      then: yup
+        .date()
+        .max(new Date(), i18n.t('form.input.validation.maxDate'))
+        .required(i18n.t('form.input.validation.required')),
     }),
-    console: yup.string().required('Requiredddd'),
+    console: yup.string().required(i18n.t('form.input.validation.required')),
     year: yup
       .date()
-      .min(new Date('01-01-1970'), 'The minimum date is 01-01-1970')
-      .required('Requiredddde'),
+      .min(
+        new Date('01-01-1970'),
+        i18n.t('form.input.validation.minDate', { date: minDateLocale }),
+      )
+      .required(i18n.t('form.input.validation.required')),
     notes: yup.string(),
   });
   const formik = useFormik({
@@ -69,7 +78,7 @@ const Form = () => {
           <Grid container spacing={3} className={style.inputsContainer}>
             <Grid item xs={12} sm={12}>
               <FormControl fullWidth>
-                <FormLabel>Title</FormLabel>
+                <FormLabel>{i18n.t('form.input.title')}</FormLabel>
                 <TextField
                   name='title'
                   className={style.outlinedFieldTheme}
@@ -84,7 +93,7 @@ const Form = () => {
             </Grid>
             <Grid item xs={12} sm={6}>
               <div>
-                Completed
+                {i18n.t('form.input.completed')}
                 <Checkbox
                   name='completed'
                   classes={{ root: style.checkbox, checked: style.checked }}
@@ -95,7 +104,7 @@ const Form = () => {
             </Grid>
             <Grid item xs={12} sm={6}>
               <FormControl fullWidth>
-                <FormLabel>Date of Completion</FormLabel>
+                <FormLabel>{i18n.t('form.input.completionDate')}</FormLabel>
                 <TextField
                   disabled={!formik.values.completed}
                   name='completionDate'
@@ -114,7 +123,7 @@ const Form = () => {
             </Grid>
             <Grid item xs={12} sm={6}>
               <FormControl fullWidth>
-                <FormLabel>Console</FormLabel>
+                <FormLabel>{i18n.t('form.input.console')}</FormLabel>
                 <TextField
                   name='console'
                   className={style.selectAndDate}
@@ -135,7 +144,7 @@ const Form = () => {
             </Grid>
             <Grid item xs={12} sm={6}>
               <FormControl fullWidth>
-                <FormLabel>Year</FormLabel>
+                <FormLabel>{i18n.t('form.input.year')}</FormLabel>
                 <TextField
                   name='year'
                   className={style.selectAndDate}
@@ -150,7 +159,7 @@ const Form = () => {
             </Grid>
             <Grid item xs={12} sm={12}>
               <FormControl fullWidth>
-                <FormLabel>Personal Notes</FormLabel>
+                <FormLabel>{i18n.t('form.input.notes')}</FormLabel>
                 <TextField
                   name='notes'
                   className={style.outlinedFieldTheme}
@@ -169,14 +178,14 @@ const Form = () => {
               className={style.formButtonCancel}
               variant='contained'
             >
-              CANCEL
+              {i18n.t('form.input.cancel')}
             </Button>
             <Button
               onClick={formik.submitForm}
               variant='contained'
               color='secondary'
             >
-              SAVE
+              {i18n.t('form.input.save')}
             </Button>
           </div>
         </form>

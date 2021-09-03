@@ -21,7 +21,14 @@ const Catalog = () => {
         <SearchInput />
         <Grid container spacing={10} className={style.cardsContainer}>
           {games.map((game) => (
-            <Grid item xs={12} sm={6} md={4} className={style.item}>
+            <Grid
+              key={`${game.id}`}
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              className={style.item}
+            >
               <GameCard
                 completionDate={game.completionDate}
                 notes={game.notes}

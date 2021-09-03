@@ -1,13 +1,15 @@
+import { DateTime } from 'luxon';
+
 class Game {
   public id?: String;
 
   public title?: String;
 
-  public completionDate?: Date;
+  public completionDate?: DateTime;
 
   public console?: String;
 
-  public year?: Date;
+  public year?: DateTime;
 
   public notes?: String;
 
@@ -16,9 +18,9 @@ class Game {
   constructor(
     id: String,
     title: String,
-    completionDate: Date,
+    completionDate: DateTime,
     console: String,
-    year: Date,
+    year: DateTime,
     notes: String,
     completed: Boolean,
   ) {

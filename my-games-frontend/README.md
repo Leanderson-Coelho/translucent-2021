@@ -8,10 +8,13 @@ x update all .css to .ts
 
 x update flex to grid cards list
 
-- i18n
-- format completion date (add i18n)
+x i18n
+
+x format completion date (add i18n)
+
 - add routes config
 - improve the years old calcule
+- add theme button
 
 # Getting Started with Create React App
 
