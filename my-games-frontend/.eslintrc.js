@@ -39,5 +39,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-useless-constructor:': 0,
     'implicit-arrow-linebreak': ['off'],
+    'no-confusing-arrow': [0, { allowParens: true }],
   },
 };

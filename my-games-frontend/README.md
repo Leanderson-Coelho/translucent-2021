@@ -18,6 +18,8 @@ x improve the years old calcule
 
 - add theme button
 
+- sort list
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
