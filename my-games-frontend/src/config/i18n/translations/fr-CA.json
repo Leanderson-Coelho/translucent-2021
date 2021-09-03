@@ -5,7 +5,10 @@
     "gameCard": {
       "completedAt": "Terminé le %{date}",
       "uncompleted": "Inachevé",
-      "yearsOld": "%{old} ans"
+      "yearsOld": {
+        "thisYear": "Sorti cette année",
+        "other": "%{old} ans"
+      }
     }
   },
   "form": {

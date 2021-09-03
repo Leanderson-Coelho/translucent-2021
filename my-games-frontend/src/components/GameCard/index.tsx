@@ -49,7 +49,11 @@ const GameCard = (props: Props) => {
       </div>
       <div className={clsx(style.cardFooter, style.itemSpacingFooter)}>
         <Chip color='secondary' size='small' label={props.console} />
-        <div>{i18n.t('catalog.gameCard.yearsOld', { old: gameOld })}</div>
+        <div>
+          {gameOld > 0
+            ? i18n.t('catalog.gameCard.yearsOld.other', { old: gameOld })
+            : i18n.t('catalog.gameCard.yearsOld.thisYear')}
+        </div>
       </div>
     </Card>
   );
