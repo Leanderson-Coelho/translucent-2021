@@ -1,9 +1,10 @@
+/* eslint-disable indent */
 import React from 'react';
 import { Chip, Card, Paper, Typography } from '@material-ui/core';
 import useCardStyle from './cardStyle';
 import clsx from 'clsx';
 import i18n, { toLocaleString } from '../../config/i18n';
-import { DateTime } from 'luxon';
+import { DateTime, Interval } from 'luxon';
 
 interface Props {
   title?: String;
@@ -17,7 +18,11 @@ interface Props {
 const GameCard = (props: Props) => {
   const style = useCardStyle();
   console.warn('calculate year old');
-  const gameOld = props.year ? 10 : '0';
+  const gameOld = props.year
+    ? Interval.fromDateTimes(props.year, DateTime.now())
+        .length('years')
+        .toFixed(0)
+    : 0;
 
   return (
     <Card classes={{ root: style.root }}>

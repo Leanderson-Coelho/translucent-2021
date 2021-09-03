@@ -10,9 +10,9 @@ I18n.translations = {
   'pt-BR': pt,
 };
 
-// I18n.locale = 'pt-BR';
+I18n.locale = 'pt-BR';
 // I18n.locale = 'en-CA';
-I18n.locale = 'fr-CA';
+// I18n.locale = 'fr-CA';
 
 console.log('current locale', I18n.currentLocale());
 console.log('locales', I18n.locales.get('en-CA'));

@@ -14,7 +14,8 @@ x format completion date (add i18n)
 
 x add routes config
 
-- improve the years old calcule
+x improve the years old calcule
+
 - add theme button
 
 # Getting Started with Create React App
