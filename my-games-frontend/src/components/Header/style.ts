@@ -47,6 +47,10 @@ const useStyle = makeStyles({
   bottomStick: {
     background: 'linear-gradient(270deg, #09d1e1 20%, #2f92c3 100%)',
   },
+
+  themeButton: {
+    color: '#fff',
+  },
 });
 
 export default useStyle;

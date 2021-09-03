@@ -17,7 +17,6 @@ interface Props {
 
 const GameCard = (props: Props) => {
   const style = useCardStyle();
-  console.warn('calculate year old');
   const gameOld = props.year
     ? Interval.fromDateTimes(props.year, DateTime.now())
         .length('years')
