@@ -1,12 +1,12 @@
 import { DateTime } from 'luxon';
-import Game from '../model/Game';
+import Game from '../../model/Game';
 
 export interface State {
-  games: Game[];
+  data: Game[];
 }
 
 const initialState: State = {
-  games: [
+  data: [
     {
       id: 'asd0sa8d0',
       title: 'Com o Redux',
