@@ -17,6 +17,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import i18n, { toLocaleString } from '../../config/i18n';
 import { DateTime } from 'luxon';
+import { PATHS } from '../../Routes';
 
 const Form = () => {
   const style = useStyle();
@@ -59,7 +60,7 @@ const Form = () => {
   });
 
   const goToCatalog = () => {
-    router.push('/catalog');
+    router.push(PATHS.CATALOG);
   };
 
   const onCompletedChange = (event: ChangeEvent<HTMLInputElement>) => {

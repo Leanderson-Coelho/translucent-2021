@@ -11,7 +11,7 @@ I18n.translations = {
 };
 
 // I18n.locale = 'pt-BR';
-// I18n.locale = 'pt-BR';
+// I18n.locale = 'en-CA';
 I18n.locale = 'fr-CA';
 
 console.log('current locale', I18n.currentLocale());

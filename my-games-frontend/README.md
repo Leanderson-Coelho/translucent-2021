@@ -12,7 +12,8 @@ x i18n
 
 x format completion date (add i18n)
 
-- add routes config
+x add routes config
+
 - improve the years old calcule
 - add theme button
 

@@ -8,6 +8,7 @@ import useStyles from './style';
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { State } from '../../redux/reducer';
+import { PATHS } from '../../Routes';
 
 const Catalog = () => {
   const style = useStyles();
@@ -41,7 +42,7 @@ const Catalog = () => {
           ))}
         </Grid>
         <Fab className={style.floatingButton} size='large' color='primary'>
-          <AddIcon onClick={() => router.push('/form')} />
+          <AddIcon onClick={() => router.push(PATHS.FORM)} />
         </Fab>
       </>
     </HeaderContentTemplate>
