@@ -15,7 +15,6 @@ const useStyle = makeStyles((theme) => ({
 
   inputsContainer: {
     padding: '1rem',
-    // alignItems: 'center',
   },
 
   buttonsContainer: {

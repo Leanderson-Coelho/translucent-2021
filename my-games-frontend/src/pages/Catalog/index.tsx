@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderContentTemplate from '../../components/HeaderContentTemplate';
 import SearchInput from '../../components/SearchInput';
 import GameCard from '../../components/GameCard';
-import { Fab } from '@material-ui/core';
+import { Fab, Grid } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import useStyles from './style';
 import { useHistory } from 'react-router-dom';
@@ -19,9 +19,9 @@ const Catalog = () => {
     <HeaderContentTemplate>
       <>
         <SearchInput />
-        <div className={style.cardsContainer}>
+        <Grid container spacing={10} className={style.cardsContainer}>
           {games.map((game) => (
-            <div key={`${game.id}`} className={style.item}>
+            <Grid item xs={12} sm={6} md={4} className={style.item}>
               <GameCard
                 completionDate={game.completionDate}
                 notes={game.notes}
@@ -30,9 +30,9 @@ const Catalog = () => {
                 console={game.console}
                 completed={game.completed}
               />
-            </div>
+            </Grid>
           ))}
-        </div>
+        </Grid>
         <Fab className={style.floatingButton} size='large' color='primary'>
           <AddIcon onClick={() => router.push('/form')} />
         </Fab>

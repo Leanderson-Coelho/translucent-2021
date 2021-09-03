@@ -1,9 +1,27 @@
+/* eslint-disable no-unused-vars */
 import React, { ReactElement } from 'react';
 import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 
-// eslint-disable-next-line no-unused-vars
+const overrides = {
+  MuiCssBaseline: {
+    '@global': {
+      '*::-webkit-scrollbar': {
+        width: '0.4rem',
+      },
+      '*::-webkit-scrollbar-track': {
+        background: '#182647',
+      },
+      '*::-webkit-scrollbar-thumb': {
+        backgroundColor: '#dbdbdb',
+        borderRadius: '1rem',
+      },
+    },
+  },
+};
+
 const lightTheme = createTheme({
+  overrides,
   palette: {
     // type: 'dark',
     primary: {
@@ -24,8 +42,8 @@ const lightTheme = createTheme({
   },
 });
 
-// eslint-disable-next-line no-unused-vars
 const darkTheme = createTheme({
+  overrides,
   palette: {
     type: 'dark',
     primary: {
