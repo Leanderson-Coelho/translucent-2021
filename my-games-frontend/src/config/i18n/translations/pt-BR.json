@@ -1,0 +1,30 @@
+{
+  "catalog": {
+    "breadcrumb": "Catalogo",
+    "searchLabel": "Pesquisar...",
+    "gameCard": {
+      "completedAt": "Finalizado em %{date}",
+      "uncompleted": "Não finalizado",
+      "yearsOld": "%{old} anos de idade"
+    }
+  },
+  "form": {
+    "breadcrumb": "Adicionar",
+    "input": {
+      "title": "Título",
+      "completed": "Finalizado",
+      "completionDate": "Data de finalização",
+      "console": "Console",
+      "year": "Ano",
+      "notes": "Notas Pessoais",
+      "cancel": "Cancelar",
+      "save": "Salvar",
+      "validation": {
+        "required": "Este campo é obrigatório",
+        "maxCharacters": "Máximo de 150 caracteres",
+        "maxDate": "A data máxima é hoje",
+        "minDate": "A data mínima é %{date}"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "catalog": {
+    "breadcrumb": "Catalog",
+    "searchLabel": "Search...",
+    "gameCard": {
+      "completedAt": "Completed at %{date}",
+      "uncompleted": "Uncompleted",
+      "yearsOld": "%{old} years old"
+    }
+  },
+  "form": {
+    "breadcrumb": "Add",
+    "input": {
+      "title": "Title",
+      "completed": "Completed",
+      "completionDate": "Date of Completion",
+      "console": "Console",
+      "year": "Year",
+      "notes": "Personal Notes",
+      "cancel": "Cancel",
+      "save": "Save"
+    },
+    "validation": {
+      "required": "This field is required",
+      "maxCharacters": "Maximum 150 characters",
+      "maxDate": "The maximum date is today",
+      "minDate": "Minimum date is %{date}"
+    }
+  }
+}

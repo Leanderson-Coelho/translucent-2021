@@ -38,5 +38,6 @@ module.exports = {
     'operator-linebreak': ['off'],
     'import/prefer-default-export': 'off',
     'no-useless-constructor:': 0,
+    'implicit-arrow-linebreak': ['off'],
   },
 };
