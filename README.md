@@ -2,6 +2,16 @@
 
 ### CHANGELOG AND PROGRESS
 
+#### 09/03/2021
+
+`Last Commit: FrontEnd` [cff72a0](https://github.com/Leanderson-Coelho/translucent-2021/tree/cff72a0f413464f7fd6c001a59bc4666be5c2cfa)
+
+- **FrontEnd Development**: Adding a new configuration for breadcrumb i18n.
+
+- **FrontEnd Development**: Problems with new set i18n idiom.¹
+
+- **FrontEnd Development**: Configuring App (Main component) to define i18n (solution¹).
+
 #### 09/02/2021
 
 `Last Commit: FrontEnd` [6cf5456](https://github.com/Leanderson-Coelho/translucent-2021/tree/6cf5456d7ce632656b2b091a3c7df5f662fdc500)
