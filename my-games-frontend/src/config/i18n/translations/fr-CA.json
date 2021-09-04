@@ -29,5 +29,9 @@
         "minDate": "La date minimale est le %{date}"
       }
     }
+  },
+  "config": {
+    "alterLocale": "Changer la langue",
+    "confirmButton": "Confirmer"
   }
 }

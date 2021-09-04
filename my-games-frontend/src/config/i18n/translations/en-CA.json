@@ -21,13 +21,17 @@
       "year": "Year",
       "notes": "Personal Notes",
       "cancel": "Cancel",
-      "save": "Save"
-    },
-    "validation": {
-      "required": "This field is required",
-      "maxCharacters": "Maximum 150 characters",
-      "maxDate": "The maximum date is today",
-      "minDate": "Minimum date is %{date}"
+      "save": "Save",
+      "validation": {
+        "required": "This field is required",
+        "maxCharacters": "Maximum 150 characters",
+        "maxDate": "The maximum date is today",
+        "minDate": "Minimum date is %{date}"
+      }
     }
+  },
+  "config": {
+    "alterLocale": "Change the language",
+    "confirmButton": "Confirm"
   }
 }
