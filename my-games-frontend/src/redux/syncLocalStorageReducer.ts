@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import LocalStorageService from '../services/localStorage';
-import gameReducer from './game/gameReducer';
+import gameReducer, {
+  initialState as gameInitialState,
+} from './game/gameReducer';
 import themeReducer from './theme/themeReducer';
 import locationReducer from './location/locationReducer';
 import {
@@ -58,7 +60,7 @@ const syncLocalStorageReducer = (state: any, action: any) => {
     // Synchronizing with stored state
     const newState = reducers(localStorageState, action);
     // Do new call
-    newState.game.data = [];
+    newState.game = gameInitialState;
     newState.location.breadcrumbs = localStorageStateBreadcrumbs;
     setLocalStorageState(newState);
     return newState;
