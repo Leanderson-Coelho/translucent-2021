@@ -15,4 +15,9 @@ export default {
     }
     return [];
   },
+
+  async addGame(game: any): Promise<Game> {
+    const response = await axios.post(`${API_BASE_PATH}/game`, game);
+    return response.data;
+  },
 };

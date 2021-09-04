@@ -3,6 +3,9 @@ import {
   FETCH_GAMES_SUCCESS,
   FETCH_GAMES_FAIL,
   FETCH_GAMES,
+  ADD_GAME,
+  ADD_GAME_SUCCESS,
+  ADD_GAME_FAIL,
 } from './actionTypes';
 
 export interface State {
@@ -37,6 +40,24 @@ const reducer = (state = initialState, action: any) => {
         ...state,
         errorFetch: action.payload,
         loading: false,
+      };
+    case ADD_GAME:
+      return {
+        ...state,
+        loading: true,
+        errorAdd: [],
+      };
+    case ADD_GAME_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        data: [...state.data, action.payload],
+      };
+    case ADD_GAME_FAIL:
+      return {
+        ...state,
+        loading: false,
+        errorAdd: action.payload,
       };
     default:
       return state;
