@@ -16,6 +16,15 @@ const useStyles = makeStyles({
   item: {
     height: '22rem',
   },
+
+  loading: {
+    position: 'absolute',
+    bottom: 0,
+    top: 0,
+    right: 0,
+    left: 0,
+    margin: 'auto',
+  },
 });
 
 export default useStyles;
