@@ -16,9 +16,11 @@ x add routes config
 
 x improve the years old calcule
 
-- add theme button
+x add theme button
 
 - sort list
+
+- update router breadcrumb i18n
 
 # Getting Started with Create React App
 
