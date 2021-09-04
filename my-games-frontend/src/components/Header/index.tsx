@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   AppBar,
   Toolbar,
@@ -12,36 +12,28 @@ import useStyle from './style';
 import clsx from 'clsx';
 import InvertColorsIcon from '@material-ui/icons/InvertColors';
 import TranslateIcon from '@material-ui/icons/Translate';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { changeTheme } from '../../redux/theme/actionCreators';
 import Modal from '@material-ui/core/Modal';
 import useGlobalStyle from '../../config/theme/globalStyle';
 import i18n from '../../config/i18n';
-import LocalStorageService from '../../services/localStorage';
 import { changeLocation } from '../../redux/location/actionCreators';
+import { RootState } from '../../redux';
 
 const Header = () => {
   const style = useStyle();
   const globalStyle = useGlobalStyle();
   const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
-  const [userLocale, setUserLocale] = useState(
-    LocalStorageService.getItem('locale'),
-  );
+  const locale = useSelector((state: RootState) => state.location.data);
+  const [userLocale, setUserLocale] = useState(locale);
 
   const dispatchChangeTheme = () => {
     dispatch(changeTheme());
   };
 
-  useEffect(() => {
-    console.log('userLocale', userLocale);
-  }, [userLocale]);
-
   const confirmLocale = () => {
-    LocalStorageService.setItem('locale', userLocale);
     dispatch(changeLocation(userLocale));
-    // i18n.fallbacks = userLocale;
-    // router.go(0);
   };
 
   return (

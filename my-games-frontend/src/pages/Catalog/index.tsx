@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import HeaderContentTemplate from '../../components/HeaderContentTemplate';
 import SearchInput from '../../components/SearchInput';
 import GameCard from '../../components/GameCard';
@@ -14,11 +14,6 @@ const Catalog = () => {
   const style = useStyles();
   const router = useHistory();
   const games = useSelector((state: RootState) => state.game.data);
-  const stateRedux = useSelector((state) => state);
-
-  useEffect(() => {
-    console.log('state', stateRedux);
-  }, [stateRedux]);
 
   return (
     <HeaderContentTemplate>

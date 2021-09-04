@@ -18,12 +18,6 @@ I18n.translations = {
 const userLocale = LocalStorageService.getItem(USER_LOCALE_KEY);
 I18n.locale = userLocale || 'fr-CA';
 
-console.log('current locale', I18n.currentLocale());
-console.log('locales', I18n.locales.get('en-CA'));
-
-console.log(DateTime.now().setLocale('fr').toLocaleString());
-console.log('I18n.currentLocale', I18n.currentLocale());
-
 const toLocaleString = (date: DateTime): String =>
   date.setLocale(I18n.currentLocale()).toLocaleString();
 
