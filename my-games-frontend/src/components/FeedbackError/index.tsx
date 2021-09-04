@@ -8,7 +8,7 @@ import i18n from '../../config/i18n';
 
 interface Props {
   severity: 'success' | 'info' | 'warning' | 'error';
-  type: String;
+  type: 'FETCH' | 'ADD';
 }
 
 const FeedbackError = (props: Props) => {

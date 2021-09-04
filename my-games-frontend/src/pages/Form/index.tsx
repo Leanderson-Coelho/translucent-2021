@@ -19,17 +19,17 @@ import i18n, { toLocaleString } from '../../config/i18n';
 import { DateTime } from 'luxon';
 import { PATHS } from '../../Routes';
 import useGlobalStyle from '../../config/theme/globalStyle';
+import FeedbackError from '../../components/FeedbackError';
+import { useDispatch } from 'react-redux';
+import { addGame } from '../../redux/game/actionCreators';
 
 const Form = () => {
   const style = useStyle();
   const globalStyle = useGlobalStyle();
   const router = useHistory();
+  const dispatch = useDispatch();
   const minDateLocale = toLocaleString(DateTime.fromISO('1970-01-01'));
   const validationSchema = yup.object({
-    title: yup
-      .string()
-      .max(150, i18n.t('form.input.validation.maxCharacters'))
-      .required(i18n.t('form.input.validation.required')),
     completed: yup.boolean(),
     completionDate: yup.date().when('completed', {
       is: true,
@@ -48,18 +48,6 @@ const Form = () => {
       .required(i18n.t('form.input.validation.required')),
     notes: yup.string(),
   });
-  const formik = useFormik({
-    initialValues: {
-      title: '',
-      completionDate: '',
-      console: 'XBOX_ONE',
-      year: '',
-      notes: '',
-      completed: false,
-    },
-    validationSchema,
-    onSubmit: (data) => console.log(data),
-  });
 
   const goToCatalog = () => {
     router.push(PATHS.CATALOG);
@@ -70,19 +58,37 @@ const Form = () => {
     formik.handleChange(event);
   };
 
-  // TODO i18n labels
+  const dispatchAddGame = (data: any) => {
+    dispatch(addGame(data));
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      title: '',
+      completionDate: '',
+      console: 'XBOX_ONE',
+      year: '',
+      notes: '',
+      completed: false,
+    },
+    validationSchema,
+    onSubmit: dispatchAddGame,
+  });
+
   return (
     <HeaderContentTemplate>
       <div className={style.formContent}>
         <IconButton onClick={goToCatalog}>
           <ArrowBackIcon classes={{ root: style.backButton }} />
         </IconButton>
+        <FeedbackError severity='error' type='ADD' />
         <form>
           <Grid container spacing={3} className={style.inputsContainer}>
             <Grid item xs={12} sm={12}>
               <FormControl fullWidth>
                 <FormLabel>{i18n.t('form.input.title')}</FormLabel>
                 <TextField
+                  autoComplete='off'
                   name='title'
                   className={style.outlinedFieldTheme}
                   autoFocus
@@ -165,6 +171,7 @@ const Form = () => {
                 <FormLabel>{i18n.t('form.input.notes')}</FormLabel>
                 <TextField
                   name='notes'
+                  autoComplete='off'
                   className={style.outlinedFieldTheme}
                   variant='outlined'
                   value={formik.values.notes}
