@@ -27,7 +27,8 @@
         "maxDate": "La date maximale est aujourd'hui",
         "minDate": "La date minimale est le %{date}"
       }
-    }
+    },
+    "success": "Jeu ajouté avec succès !"
   },
   "config": {
     "alterLocale": "Changer la langue",
@@ -39,7 +40,8 @@
         "operation": {
           "find": {
             "all": "Échec du chargement des jeux."
-          }
+          },
+          "save": "Échec de l'ajout du jeu"
         }
       }
     },

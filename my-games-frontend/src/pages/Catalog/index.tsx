@@ -19,9 +19,10 @@ const Catalog = () => {
   const dispatch = useDispatch();
   const games = useSelector((state: RootState) => state.game.data);
   const gamesLoading = useSelector((state: RootState) => state.game.loading);
+  const coldList = useSelector((state: RootState) => state.game.coldList);
 
   useEffect(() => {
-    if (games.length === 0) {
+    if (games.length === 0 || coldList) {
       dispatch(fetchGames());
     }
   }, []);

@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, useEffect } from 'react';
 import HeaderContentTemplate from '../../components/HeaderContentTemplate';
 import useStyle from './style';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
@@ -11,6 +11,7 @@ import {
   Button,
   FormControl,
   FormLabel,
+  Snackbar,
 } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import { useFormik } from 'formik';
@@ -20,8 +21,10 @@ import { DateTime } from 'luxon';
 import { PATHS } from '../../Routes';
 import useGlobalStyle from '../../config/theme/globalStyle';
 import FeedbackError from '../../components/FeedbackError';
-import { useDispatch } from 'react-redux';
-import { addGame } from '../../redux/game/actionCreators';
+import { useDispatch, useSelector } from 'react-redux';
+import { addGame, clearStatusGame } from '../../redux/game/actionCreators';
+import { RootState } from '../../redux';
+import MuiAlert from '@material-ui/lab/Alert';
 
 const Form = () => {
   const style = useStyle();
@@ -48,6 +51,12 @@ const Form = () => {
       .required(i18n.t('form.input.validation.required')),
     notes: yup.string(),
   });
+  const loading = useSelector((state: RootState) => state.game.loading);
+  const success = useSelector((state: RootState) => state.game.success);
+
+  useEffect(() => {
+    formik.resetForm();
+  }, [success]);
 
   const goToCatalog = () => {
     router.push(PATHS.CATALOG);
@@ -66,7 +75,7 @@ const Form = () => {
     initialValues: {
       title: '',
       completionDate: '',
-      console: 'XBOX_ONE',
+      console: 'XBOX ONE',
       year: '',
       notes: '',
       completed: false,
@@ -78,10 +87,24 @@ const Form = () => {
   return (
     <HeaderContentTemplate>
       <div className={style.formContent}>
-        <IconButton onClick={goToCatalog}>
+        <IconButton disabled={loading} onClick={goToCatalog}>
           <ArrowBackIcon classes={{ root: style.backButton }} />
         </IconButton>
         <FeedbackError severity='error' type='ADD' />
+        <Snackbar
+          color=''
+          anchorOrigin={{
+            horizontal: 'center',
+            vertical: 'top',
+          }}
+          open={success}
+          autoHideDuration={3000}
+          onClose={() => dispatch(clearStatusGame())}
+        >
+          <MuiAlert severity='success' elevation={1} variant='filled'>
+            {i18n.t('form.success')}
+          </MuiAlert>
+        </Snackbar>
         <form>
           <Grid container spacing={3} className={style.inputsContainer}>
             <Grid item xs={12} sm={12}>
@@ -143,9 +166,9 @@ const Form = () => {
                   error={Boolean(formik.errors.console)}
                   helperText={formik.touched.console && formik.errors.console}
                 >
-                  <MenuItem value='XBOX_ONE'>XBOX ONE</MenuItem>
+                  <MenuItem value='XBOX ONE'>XBOX ONE</MenuItem>
                   <MenuItem value='PS4'>PS4</MenuItem>
-                  <MenuItem value='NINTENDO_SWITCH'>NINTENDO SWITCH</MenuItem>
+                  <MenuItem value='NINTENDO SWITCH'>NINTENDO SWITCH</MenuItem>
                   <MenuItem value='PS5'>PS5</MenuItem>
                   <MenuItem value='PC'>PC</MenuItem>
                 </TextField>
@@ -184,6 +207,7 @@ const Form = () => {
           </Grid>
           <div className={style.buttonsContainer}>
             <Button
+              disabled={loading}
               onClick={goToCatalog}
               className={style.formButtonCancel}
               variant='contained'
@@ -191,6 +215,7 @@ const Form = () => {
               {i18n.t('form.input.cancel')}
             </Button>
             <Button
+              disabled={loading}
               onClick={formik.submitForm}
               variant='contained'
               color='secondary'
