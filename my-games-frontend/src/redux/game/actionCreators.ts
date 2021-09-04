@@ -6,6 +6,7 @@ import {
   ADD_GAME,
   ADD_GAME_SUCCESS,
   ADD_GAME_FAIL,
+  CLEAR_STATUS_GAME,
 } from './actionTypes';
 
 export const fetchGames = () => ({
@@ -35,4 +36,8 @@ export const addGameSuccess = (gameSuccess: Game) => ({
 export const addGameFail = (error: any) => ({
   type: ADD_GAME_FAIL,
   payload: error,
+});
+
+export const clearStatusGame = () => ({
+  type: CLEAR_STATUS_GAME,
 });

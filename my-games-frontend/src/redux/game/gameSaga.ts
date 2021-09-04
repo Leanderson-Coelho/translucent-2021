@@ -16,8 +16,13 @@ function* fetchGames() {
     const games: Game[] = yield call(GameService.fetchGames);
     yield put(fetchGamesSuccess(games));
   } catch (error: any) {
-    console.warn('Error on fetch games', error.response.data.errors);
-    yield put(fetchGamesFail(error.response.data.errors));
+    if (error.response && error.response.data) {
+      console.warn('Error on fetch games', error.response.data.errors);
+      yield put(fetchGamesFail(error.response.data.errors));
+    } else {
+      console.warn('Error on fetch games', error);
+      yield put(fetchGamesFail(['error.fail.on.operation.find.all']));
+    }
   }
 }
 
@@ -35,8 +40,13 @@ function* addGame(action: any) {
     );
     yield put(addGameSuccess(game));
   } catch (error: any) {
-    console.warn('Error on add game', error.response.data.errors);
-    yield put(addGameFail(error.response.data.errors));
+    if (error.response && error.response.data) {
+      console.warn('Error on add game', error.response.data.errors);
+      yield put(addGameFail(error.response.data.errors));
+    } else {
+      console.warn('Error on add game', error);
+      yield put(addGameFail(['error.fail.on.operation.save']));
+    }
   }
 }
 

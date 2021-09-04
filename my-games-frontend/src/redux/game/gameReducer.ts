@@ -6,20 +6,25 @@ import {
   ADD_GAME,
   ADD_GAME_SUCCESS,
   ADD_GAME_FAIL,
+  CLEAR_STATUS_GAME,
 } from './actionTypes';
 
 export interface State {
   data: Game[];
   loading: boolean;
+  success: boolean;
   errorFetch: [];
   errorAdd: [];
+  coldList: boolean;
 }
 
 export const initialState: State = {
   data: [],
   loading: false,
+  success: false,
   errorFetch: [],
   errorAdd: [],
+  coldList: true,
 };
 
 const reducer = (state = initialState, action: any) => {
@@ -28,6 +33,7 @@ const reducer = (state = initialState, action: any) => {
       return {
         ...state,
         loading: true,
+        coldList: false,
       };
     case FETCH_GAMES_SUCCESS:
       return {
@@ -51,6 +57,7 @@ const reducer = (state = initialState, action: any) => {
       return {
         ...state,
         loading: false,
+        success: true,
         data: [...state.data, action.payload],
       };
     case ADD_GAME_FAIL:
@@ -58,6 +65,11 @@ const reducer = (state = initialState, action: any) => {
         ...state,
         loading: false,
         errorAdd: action.payload,
+      };
+    case CLEAR_STATUS_GAME:
+      return {
+        ...state,
+        success: false,
       };
     default:
       return state;
