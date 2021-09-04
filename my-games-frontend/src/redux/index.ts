@@ -1,17 +1,8 @@
-import { combineReducers, createStore } from 'redux';
-import gameReducer from './game/gameReducer';
-import themeReducer from './theme/themeReducer';
-import locationReducer from './location/locationReducer';
+import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import syncLocalStorageReducer from './syncLocalStorageReducer';
 
-const store = createStore(
-  combineReducers({
-    game: gameReducer,
-    theme: themeReducer,
-    location: locationReducer,
-  }),
-  composeWithDevTools(),
-);
+const store = createStore(syncLocalStorageReducer, composeWithDevTools());
 
 export type RootState = ReturnType<typeof store.getState>;
 

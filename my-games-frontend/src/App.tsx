@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { CssBaseline } from '@material-ui/core';
 import Routes from './Routes';
-import i18n from './config/i18n';
-import { useSelector } from 'react-redux';
-import { RootState } from './redux';
+import useUpdateLocation from './hooks/useUpdateLocation';
+import { changeBreadcrumb } from './redux/location/actionCreators';
+import { useDispatch } from 'react-redux';
 
 function App() {
-  const [updateLocale, setUpdateLocale] = useState();
-  const locale = useSelector((state: RootState) => state.location.data);
+  const dispatch = useDispatch();
+  const updateLocale = useUpdateLocation();
 
   useEffect(() => {
-    console.log('App locale', locale);
-    i18n.locale = locale;
-    setUpdateLocale(locale);
-  }, [locale]);
+    dispatch(changeBreadcrumb());
+  }, [updateLocale]);
 
   return (
     <div>
