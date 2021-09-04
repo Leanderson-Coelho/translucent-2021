@@ -24,7 +24,6 @@
       "save": "Salvar",
       "validation": {
         "required": "Este campo é obrigatório",
-        "maxCharacters": "Máximo de 150 caracteres",
         "maxDate": "A data máxima é hoje",
         "minDate": "A data mínima é %{date}"
       }
@@ -42,6 +41,46 @@
             "all": "Falha ao carregar jogos."
           }
         }
+      }
+    },
+    "title": {
+      "already": {
+        "exists": "O título já existe"
+      },
+      "max": {
+        "limit": "Limite máximo do título do jogo atingido"
+      }
+    },
+    "invalid": {
+      "title": {
+        "not": {
+          "empty": "O Título é obrigatório"
+        }
+      },
+      "completionDate": {
+        "not": {
+          "future": "A data de finalização máxima é hoje"
+        }
+      },
+      "console": {
+        "not": {
+          "empty": "O campo console é obrigatório"
+        }
+      },
+      "year": {
+        "not": {
+          "null": "O ano do jogo é obrigatório"
+        }
+      },
+      "completed": {
+        "not": {
+          "null": "O campo completado é obrigatório"
+        }
+      }
+    },
+    "year": {
+      "min": {
+        "limit": "Limite mínimo do ano do jogo atingido"
       }
     }
   }

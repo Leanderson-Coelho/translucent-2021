@@ -24,7 +24,6 @@
       "save": "Save",
       "validation": {
         "required": "This field is required",
-        "maxCharacters": "Maximum 150 characters",
         "maxDate": "The maximum date is today",
         "minDate": "Minimum date is %{date}"
       }
@@ -42,6 +41,46 @@
             "all": "Failed to load games."
           }
         }
+      }
+    },
+    "title": {
+      "already": {
+        "exists": "The title already exists"
+      },
+      "max": {
+        "limit": "Maximum game title limit reached"
+      }
+    },
+    "invalid": {
+      "title": {
+        "not": {
+          "empty": "Title is required"
+        }
+      },
+      "completionDate": {
+        "not": {
+          "future": "Maximum completion date is today"
+        }
+      },
+      "console": {
+        "not": {
+          "empty": "The console field is required"
+        }
+      },
+      "year": {
+        "not": {
+          "null": "Game year is required"
+        }
+      },
+      "completed": {
+        "not": {
+          "null": "Completed field is required"
+        }
+      }
+    },
+    "year": {
+      "min": {
+        "limit": "Minimum game year limit reached"
       }
     }
   }
