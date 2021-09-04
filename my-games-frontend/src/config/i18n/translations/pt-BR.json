@@ -33,5 +33,16 @@
   "config": {
     "alterLocale": "Alterar o idioma",
     "confirmButton": "Confirmar"
+  },
+  "error": {
+    "fail": {
+      "on": {
+        "operation": {
+          "find": {
+            "all": "Falha ao carregar jogos."
+          }
+        }
+      }
+    }
   }
 }
