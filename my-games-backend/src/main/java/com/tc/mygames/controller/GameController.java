@@ -21,6 +21,7 @@ import java.util.HashMap;
 @RestController
 @RequestMapping("game")
 @AllArgsConstructor
+@CrossOrigin()
 public class GameController {
 
     private GameService gameService;
