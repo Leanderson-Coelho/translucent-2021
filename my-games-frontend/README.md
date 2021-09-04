@@ -20,7 +20,7 @@ x add theme button
 
 - sort list
 
-- update router breadcrumb i18n
+x update router breadcrumb i18n
 
 # Getting Started with Create React App
 

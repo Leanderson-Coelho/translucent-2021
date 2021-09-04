@@ -27,6 +27,20 @@ export const initialState: State = {
   coldList: true,
 };
 
+const sortGamesDateDesc = (games: Game[]) =>
+  games.sort((a: Game, b: Game) => {
+    if (b.year && a.year) {
+      if (b.year > a.year) {
+        return -1;
+      }
+      if (b.year < a.year) {
+        return 1;
+      }
+      return 0;
+    }
+    return 0;
+  });
+
 const reducer = (state = initialState, action: any) => {
   switch (action.type) {
     case FETCH_GAMES:
@@ -38,7 +52,7 @@ const reducer = (state = initialState, action: any) => {
     case FETCH_GAMES_SUCCESS:
       return {
         ...state,
-        data: action.payload,
+        data: sortGamesDateDesc(action.payload),
         loading: false,
       };
     case FETCH_GAMES_FAIL:
@@ -58,7 +72,7 @@ const reducer = (state = initialState, action: any) => {
         ...state,
         loading: false,
         success: true,
-        data: [...state.data, action.payload],
+        data: sortGamesDateDesc([...state.data, action.payload]),
       };
     case ADD_GAME_FAIL:
       return {
