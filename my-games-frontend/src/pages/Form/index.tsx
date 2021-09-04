@@ -18,9 +18,11 @@ import * as yup from 'yup';
 import i18n, { toLocaleString } from '../../config/i18n';
 import { DateTime } from 'luxon';
 import { PATHS } from '../../Routes';
+import useGlobalStyle from '../../config/theme/globalStyle';
 
 const Form = () => {
   const style = useStyle();
+  const globalStyle = useGlobalStyle();
   const router = useHistory();
   const minDateLocale = toLocaleString(DateTime.fromISO('1970-01-01'));
   const validationSchema = yup.object({
@@ -109,7 +111,7 @@ const Form = () => {
                 <TextField
                   disabled={!formik.values.completed}
                   name='completionDate'
-                  className={style.selectAndDate}
+                  className={globalStyle.selectAndDate}
                   type='date'
                   variant='outlined'
                   value={formik.values.completionDate}
@@ -127,7 +129,7 @@ const Form = () => {
                 <FormLabel>{i18n.t('form.input.console')}</FormLabel>
                 <TextField
                   name='console'
-                  className={style.selectAndDate}
+                  className={globalStyle.selectAndDate}
                   select
                   variant='outlined'
                   value={formik.values.console}
@@ -148,7 +150,7 @@ const Form = () => {
                 <FormLabel>{i18n.t('form.input.year')}</FormLabel>
                 <TextField
                   name='year'
-                  className={style.selectAndDate}
+                  className={globalStyle.selectAndDate}
                   type='date'
                   variant='outlined'
                   value={formik.values.year}

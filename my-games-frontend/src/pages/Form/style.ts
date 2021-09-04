@@ -47,27 +47,6 @@ const useStyle = makeStyles((theme) => ({
 
   checked: {},
 
-  selectAndDate: {
-    '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input': {
-      color:
-        theme.palette.type === 'dark'
-          ? theme.palette.secondary.main
-          : theme.palette.primary.main,
-    },
-    '& .MuiInputLabel-root.Mui-focused': {
-      color:
-        theme.palette.type === 'dark'
-          ? theme.palette.secondary.main
-          : theme.palette.primary.main,
-    },
-    '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-      borderColor:
-        theme.palette.type === 'dark'
-          ? theme.palette.secondary.main
-          : theme.palette.primary.main,
-    },
-  },
-
   outlinedFieldTheme: {
     '& label.Mui-focused': {
       color:
