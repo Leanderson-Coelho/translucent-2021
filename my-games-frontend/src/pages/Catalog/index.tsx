@@ -65,6 +65,7 @@ const Catalog = () => {
           debounceTime(500),
           map((value) => value.trim().toLocaleLowerCase()),
           map((value) => filterGameByTitle(value)),
+          map((gamesFiltered) => gamesFiltered.slice(0, 5)),
         )
         .subscribe((value) => setSuggestions(value));
 
