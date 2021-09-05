@@ -2,6 +2,22 @@
 
 ### CHANGELOG AND PROGRESS
 
+#### 09/04/2021
+
+`Last Commit: 90d4b2e` [cff72a0](https://github.com/Leanderson-Coelho/translucent-2021/tree/90d4b2ea0e40e00ca5bddc4a3d534b73fd2faad5)
+
+- **FrontEnd Development**: Adding configuration to sync redux with local storage (save theme and language preferences).
+
+- **FrontEnd Development**: Adding redux middleware saga for async requests integration.
+
+- **FrontEnd Development**: Creating generic Feedback error component.
+
+- **FrontEnd Development**: Adding sorting to catalog list and autocomplete to search bar using RxJs.
+
+`Last Commit: BackEnd` [d6721a2](https://github.com/Leanderson-Coelho/translucent-2021/tree/d6721a21dff0b5de06389e42a9f2051249f4322b)
+
+- **BackEnd Development**: CORS origin configuration.
+
 #### 09/03/2021
 
 `Last Commit: FrontEnd` [cff72a0](https://github.com/Leanderson-Coelho/translucent-2021/tree/cff72a0f413464f7fd6c001a59bc4666be5c2cfa)
