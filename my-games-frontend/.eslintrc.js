@@ -41,5 +41,6 @@ module.exports = {
     'implicit-arrow-linebreak': ['off'],
     'no-confusing-arrow': [0, { allowParens: true }],
     'react/no-array-index-key': 'off',
+    'function-paren-newline': 'off',
   },
 };
