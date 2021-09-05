@@ -4,7 +4,7 @@
 
 #### 09/04/2021
 
-`Last Commit: FrontEnd` [cff72a0](https://github.com/Leanderson-Coelho/translucent-2021/tree/90d4b2ea0e40e00ca5bddc4a3d534b73fd2faad5)
+`Last Commit: FrontEnd` [90d4b2e](https://github.com/Leanderson-Coelho/translucent-2021/tree/90d4b2ea0e40e00ca5bddc4a3d534b73fd2faad5)
 
 - **FrontEnd Development**: Adding configuration to sync redux with local storage (save theme and language preferences).
 
