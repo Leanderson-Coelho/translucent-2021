@@ -2,30 +2,6 @@
 
 #### TODO Priorities
 
-x remove 'fullWidth' prop from TextFields
-
-x update all .css to .ts
-
-x update flex to grid cards list
-
-x i18n
-
-x format completion date (add i18n)
-
-x add routes config
-
-x improve the years old calcule
-
-x add theme button
-
-x sort list
-
-x update router breadcrumb i18n
-
-- test on game card
-
-- test on search (button clear) catalog
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

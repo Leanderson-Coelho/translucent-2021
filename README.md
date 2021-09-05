@@ -1,7 +1,6 @@
 # TODO
 
 - swagger
-- backend test
 - dockerize
 
 ### CHANGELOG AND PROGRESS
@@ -13,6 +12,12 @@
 - **FrontEnd Development**: Starting frontend tests. Problems with Test Suits on render components without redux Provider.
 
 - **FrontEnd Development**: Searching approaches to mock redux provider store. Overriding render method of React Testing Lib to work with test and redux provider
+
+- **FrontEnd Development**: Adding test to Catalog component with mock and wait for update state
+
+`Last Commit: BackEnd` [x](xxxxxxxxxxxxxxxxx)
+
+- **BackEnd Development**: Adding Backend tests
 
 #### 09/04/2021
 
