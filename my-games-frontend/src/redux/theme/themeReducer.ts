@@ -7,7 +7,7 @@ export const LIGHT_TYPE = 'LIGHT';
 export const DARK_TYPE = 'DARK';
 
 interface State {
-  themeConfig: 'LIGHT' | 'DARK';
+  themeConfig: String;
 }
 
 const initialState: State = {

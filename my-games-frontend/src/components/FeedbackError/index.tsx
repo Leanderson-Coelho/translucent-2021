@@ -27,7 +27,7 @@ const FeedbackError = (props: Props) => {
           variant='filled'
           key={`${index}`}
         >
-          {i18n.t(`${error}`)}
+          <div data-testid='error'>{i18n.t(`${error}`)}</div>
         </MuiAlert>
       ))}
     </div>

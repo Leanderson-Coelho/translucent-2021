@@ -119,12 +119,16 @@ const Catalog = () => {
       <>
         <Card classes={{ root: style.search }}>
           <InputBase
+            data-testid='search-input'
             value={search}
             onChange={handleChange}
             classes={{ root: style.inputBase }}
             placeholder={i18n.t('catalog.searchLabel')}
           />
-          <IconButton onClick={handleClearSearch}>
+          <IconButton
+            data-testid='search-clear-button'
+            onClick={() => setSearch('')}
+          >
             <CancelIcon />
           </IconButton>
         </Card>

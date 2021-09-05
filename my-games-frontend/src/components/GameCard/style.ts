@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
-const useCardStyle = makeStyles((theme) => ({
+const useStyle = makeStyles((theme) => ({
   root: {
     borderRadius: '0 0 0.3rem 0.3rem',
     height: '20rem',
@@ -45,4 +45,4 @@ const useCardStyle = makeStyles((theme) => ({
   },
 }));
 
-export default useCardStyle;
+export default useStyle;

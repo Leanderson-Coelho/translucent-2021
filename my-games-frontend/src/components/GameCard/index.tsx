@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 import React from 'react';
 import { Chip, Card, Paper, Typography } from '@material-ui/core';
-import useCardStyle from './cardStyle';
+import useStyle from './style';
 import clsx from 'clsx';
 import i18n, { toLocaleString } from '../../config/i18n';
 import { DateTime, Interval } from 'luxon';
@@ -16,7 +16,7 @@ interface Props {
 }
 
 const GameCard = (props: Props) => {
-  const style = useCardStyle();
+  const style = useStyle();
   const gameOld = props.year
     ? Interval.fromDateTimes(props.year, DateTime.now())
         .length('years')
@@ -26,6 +26,7 @@ const GameCard = (props: Props) => {
   return (
     <Card classes={{ root: style.root }}>
       <Paper
+        data-testid='title'
         classes={{ root: style.cardHeader }}
         elevation={2}
         className={style.itemSpacing}
@@ -33,8 +34,10 @@ const GameCard = (props: Props) => {
         {props.title}
       </Paper>
       <div className={clsx(style.cardContent, style.itemSpacing)}>
-        <div className={style.cardContentNotes}>{props.notes}</div>
-        <Typography color='textSecondary'>
+        <div data-testid='notes' className={style.cardContentNotes}>
+          {props.notes}
+        </div>
+        <Typography data-testid='completionDate' color='textSecondary'>
           {props.completed && props.completionDate ? (
             <>
               {i18n.t('catalog.gameCard.completedAt', {
@@ -47,8 +50,13 @@ const GameCard = (props: Props) => {
         </Typography>
       </div>
       <div className={clsx(style.cardFooter, style.itemSpacingFooter)}>
-        <Chip color='secondary' size='small' label={props.console} />
-        <div>
+        <Chip
+          data-testid='console'
+          color='secondary'
+          size='small'
+          label={props.console}
+        />
+        <div data-testid='year'>
           {gameOld > 0
             ? i18n.t('catalog.gameCard.yearsOld.other', { old: gameOld })
             : i18n.t('catalog.gameCard.yearsOld.thisYear')}

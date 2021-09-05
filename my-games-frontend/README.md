@@ -18,9 +18,13 @@ x improve the years old calcule
 
 x add theme button
 
-- sort list
+x sort list
 
 x update router breadcrumb i18n
+
+- test on game card
+
+- test on search (button clear) catalog
 
 # Getting Started with Create React App
 

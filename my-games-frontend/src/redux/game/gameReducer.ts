@@ -13,7 +13,7 @@ export interface State {
   data: Game[];
   loading: boolean;
   success: boolean;
-  errorFetch: [];
+  errorFetch: Array<String>;
   errorAdd: [];
   coldList: boolean;
 }

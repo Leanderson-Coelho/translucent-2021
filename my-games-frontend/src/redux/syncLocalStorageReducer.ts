@@ -12,7 +12,7 @@ import {
 
 let initialized = false;
 
-const reducers = combineReducers({
+export const reducers = combineReducers({
   game: gameReducer,
   theme: themeReducer,
   location: locationReducer,
