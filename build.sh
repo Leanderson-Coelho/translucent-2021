@@ -9,5 +9,9 @@ sleep 4
 cd my-games-backend/
 mvn clean package
 cd ..
+cd my-games-frontend/
+npm install 
+cd ..
 docker-compose up --build
+
 
