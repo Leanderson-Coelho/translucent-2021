@@ -107,7 +107,7 @@ Desktop UI with dark theme and french language
 
 #### 09/06/2021
 
-`Last Commit:` [x](x)
+`Last Commit:` [c19e543](https://github.com/Leanderson-Coelho/translucent-2021/tree/c19e543d059f1d934ed9eec13a8721262112aaa9)
 
 - **BackEnd Development**: Adding Swagger to the BackEnd
 
