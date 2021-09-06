@@ -7,6 +7,7 @@ import com.tc.mygames.exception.MaximumGameTitleLimitException;
 import com.tc.mygames.exception.MinimumGameYearLimitException;
 import com.tc.mygames.service.GameService;
 import com.tc.mygames.util.ErrorResponse;
+import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +27,7 @@ public class GameController {
 
     private GameService gameService;
 
+    @ApiOperation(value = "Save a game in the app")
     @PostMapping
     public ResponseEntity save(@RequestBody @Valid GameDTO gameDTO) {
         try {
@@ -35,6 +37,7 @@ public class GameController {
         }
     }
 
+    @ApiOperation(value = "Retrieve all registered games")
     @GetMapping
     public ResponseEntity findAll() {
         try {
