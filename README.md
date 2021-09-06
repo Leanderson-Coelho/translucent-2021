@@ -111,6 +111,8 @@ Desktop UI with dark theme and french language
 
 - **BackEnd Development**: Adding Swagger to the BackEnd
 
+- **BackEnd Development and FrontEnd**: Docker, docker-compose and tests
+
 #### 09/05/2021
 
 `Last Commit: FrontEnd` [4af14cd](https://github.com/Leanderson-Coelho/translucent-2021/tree/4af14cdd36a9545a40c6169c6c75db22f2e81742)
@@ -124,8 +126,6 @@ Desktop UI with dark theme and french language
 `Last Commit: BackEnd` [4887c0d](https://github.com/Leanderson-Coelho/translucent-2021/commit/4887c0d62914fcd74505b74351dbd0bf67bd36b4)
 
 - **BackEnd Development**: Adding Backend tests
-
-- **BackEnd Development and FrontEnd**: Docker, docker-compose and tests
 
 #### 09/04/2021
 
