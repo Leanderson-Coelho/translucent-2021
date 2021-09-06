@@ -1,13 +1,119 @@
-# TODO
+## TCInc - Frontend & Backend Assignment
 
-- swagger
-- dockerize
+### My Games
 
-### CHANGELOG AND PROGRESS
+Is a App to keep all games you own. You can add new games and search for them in Catalog page. In Add page you can add a game with some informations how: Game year, your title, personal notes and more. The App has features how internationalization with languages Brazilian Portuguese, Canadian French and Canadian English and theme configuration for dark and light theme.
 
-#### 09/04/2021
+### Features
 
-`Last Commit: FrontEnd` [x](xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)
+![](https://img.shields.io/badge/i18n-You%20can%20alter%20the%20language%20of%20the%20App-brightgreen) ![](https://img.shields.io/badge/theming-You%20can%20choose%20between%20light%20and%20dark%20theme-violet) ![](https://img.shields.io/badge/automatic%20suggestions-In%20Search%20input%20you%20can%20choose%20a%20suggestion%20for%20show%20only%20it-blueviolet) ![](https://img.shields.io/badge/add%20game-add%20a%20new%20game%20in%20the%20app-informational) ![](https://img.shields.io/badge/list%20games-see%20all%20games%20added-orange)
+
+### Technologies and dependencies used
+
+###### FrontEnd
+
+[`@material-ui/core`](https://material-ui.com/): Components library that help with Button, Theme, App Bar and more.
+
+[`rxjs`](https://rxjs.dev/guide/overview): Library to manipulate asynchronous events with observables. Used on search input to do suggestions.
+
+[`i18n-js`](https://github.com/fnando/i18n-js): Library to do translations with files configurations. Used throughout FrontEnd.
+
+[`axios`](https://github.com/axios/axios): HTTP Client for browser. Used to make requests to BackEnd.
+
+[`clsx`](https://www.npmjs.com/package/clsx): Utility for constructing className strings conditionally and with concatenations.
+
+[`formik`](https://formik.org/): Form validation, formatting and error handler library.
+
+[`luxon`](https://moment.github.io/luxon/#/): Dates powerful library with support to i18n. Used to date formatting in user language.
+
+[`react`](https://reactjs.org/): Javascript library to build single pages apps.
+
+[`react-router-dom`](https://reactrouter.com/web/guides/quick-start): Library to create routes in reactjs.
+
+[`redux`](https://redux.js.org/): Library to centralize all application state. Used throughout FrontEnd.
+
+[`redux-saga`](https://redux-saga.js.org/): Redux side effect manager. Integraded with redux to manager async call to update state.
+
+[`yup`](https://github.com/jquense/yup): Library to schema validation. Used with formik.
+
+[`@testing-library/react and @testing-library/jest-dom`](https://testing-library.com/): Library help to test UI components.
+
+###### BackEnd
+
+`org.hibernate.validator`: Dependency that allow use validation annotations on models class in spring boot
+
+`io.springfox`: Dependency to generate API Documentation.
+
+`org.springframework.boot`: And Spring starter dependencies to mongodb integration and web APIs.
+
+`To this app was used mongodb`
+
+### Running
+
+With your work environment running and using these tools:
+
+- Node 12 LTS
+- Maven 3.6.0
+- Java version: 1.8.0_292
+- docker-compose 1.24.0
+
+do:
+
+Start app first time
+
+> ./build.sh
+
+use 'CRTL + C' to stop after initialization and to restart:
+
+> ./start.sh
+
+**You can access the app when the message 'Now you can see my games in browser' appear**
+
+> App: `http://localhost/`
+> API Docs: `http://localhost:8082/api/v1/swagger-ui.html#/game-controller`
+
+**Tests**
+
+`FrontEnd`: in the **my-games-frontend** folder use:
+
+> npm test
+
+should have three files with tests (case not show all tests use 'w' -> 'to show more' )
+
+`BackEnd`: in the **my-games-backend** folder use:
+
+> mvn test
+
+### Documents
+
+[UI Specification on Figma](https://www.figma.com/file/X1gmSa5GvmArgXExC3kJ7t/Requirements-Specification-Document?node-id=0%3A1)
+
+[Trello Planning](https://trello.com/b/vQCrBBFg/tcinc-frontend-backend-assignment)
+
+[Requirements Specification Document](https://docs.google.com/document/d/1TRdA4pVpm0aHK1ijPvaXK--YxASX1PJ1Eu3JnZIyg9w/edit?usp=sharing)
+
+##### System screens
+
+UI Mobile with light theme and English language
+![](./docs/ui-mobile.png?raw=true 'UI Mobile with light theme and English language')
+
+Desktop UI with dark theme and french language
+![](./docs/ui-desktop.png?raw=true 'Desktop UI with dark theme and french language')
+
+**Part** of planning in [trello](https://trello.com/b/vQCrBBFg/tcinc-frontend-backend-assignment)
+![](./docs/planning.png?raw=true 'Part of planning in trello')
+
+#### CHANGELOG AND PROGRESS
+
+#### 09/06/2021
+
+`Last Commit:` [x](x)
+
+- **BackEnd Development**: Adding Swagger to the BackEnd
+
+#### 09/05/2021
+
+`Last Commit: FrontEnd` [4af14cd](https://github.com/Leanderson-Coelho/translucent-2021/tree/4af14cdd36a9545a40c6169c6c75db22f2e81742)
 
 - **FrontEnd Development**: Starting frontend tests. Problems with Test Suits on render components without redux Provider.
 
@@ -15,9 +121,11 @@
 
 - **FrontEnd Development**: Adding test to Catalog component with mock and wait for update state
 
-`Last Commit: BackEnd` [x](xxxxxxxxxxxxxxxxx)
+`Last Commit: BackEnd` [4887c0d](https://github.com/Leanderson-Coelho/translucent-2021/commit/4887c0d62914fcd74505b74351dbd0bf67bd36b4)
 
 - **BackEnd Development**: Adding Backend tests
+
+- **BackEnd Development and FrontEnd**: Docker, docker-compose and tests
 
 #### 09/04/2021
 

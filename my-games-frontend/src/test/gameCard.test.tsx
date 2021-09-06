@@ -5,7 +5,7 @@ import { act } from 'react-dom/test-utils';
 import GameCard from '../components/GameCard';
 import { DateTime } from 'luxon';
 
-let container = null;
+let container: any = null;
 
 beforeEach(() => {
   container = document.createElement('div');

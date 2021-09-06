@@ -127,7 +127,7 @@ const Catalog = () => {
           />
           <IconButton
             data-testid='search-clear-button'
-            onClick={() => setSearch('')}
+            onClick={handleClearSearch}
           >
             <CancelIcon />
           </IconButton>

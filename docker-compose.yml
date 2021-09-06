@@ -1,0 +1,31 @@
+version: '3.3'
+services:
+  mg_database:
+    container_name: mg_database_c
+    image: mongo
+    ports:
+      - '27017:27017'
+
+  web_api:
+    build: ./my-games-backend/
+    container_name: web_api_c
+    ports:
+      - '8082:8080'
+    depends_on:
+      - mg_database
+    links:
+      - mg_database
+
+  app_client:
+    image: 'node:12'
+    container_name: app_client_c
+    working_dir: /home/app
+    volumes:
+      - ./my-games-frontend:/home/app/
+    expose:
+      - '3000'
+    ports:
+      - '80:3000'
+    depends_on:
+      - web_api
+    command: 'npm start'
